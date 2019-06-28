@@ -72,12 +72,12 @@ public class City {
     @Override
     public String toString() {
         return "City{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lat=" + lat +
-                ", lon=" + lon +
-                ", airport=" + airport +
-                ", seaport=" + seaport +
+                (id == 0 ? "" : "id=" + id) +
+                (name == null ? "" : ", name= " + name + '\'') +
+                (lat == 0 ? "" : ", lat = " + lat + '\'') +
+                (lon == 0 ? "" : ", lon = " + lon + '\'') +
+                (airport == false  ? "" : ", airoport=" + airport) +
+                (seaport == false ? "" : ", seaport=" + seaport) +
                 '}';
     }
 }
